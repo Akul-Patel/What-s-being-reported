@@ -17,6 +17,7 @@ def hello_world():
         topic=keyword_query,
         headlines=article_data['headlines'],
         snippets=article_data['snippets'],
+        dates=article['pub_date']
     )
 
 app.run(
