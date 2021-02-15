@@ -30,11 +30,10 @@ def get_article_data(keyword):
 
     headlines = map(get_headline, articles)
     snippets = map(get_snippet, articles)
-    dates =map(get_date(), articles)
+    dates = map(get_date, articles)
     
     return {
         'headlines': list(headlines),
         'snippets': list(snippets),
-        'dates': list(dates)    
-        
+        'dates': list(dates),
     }
