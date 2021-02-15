@@ -18,6 +18,19 @@ def hello_world():
         headlines=article_data['headlines'],
         snippets=article_data['snippets'],
     )
+@app.route('/search/<user_text>')
+def user_text(user_text):
+    # show the user profile for that user
+    keyword_query = user_text # Change it to something you're interested in!
+    article_data = get_article_data(keyword_query)
+    topic=keyword_query
+    headlines=article_data['headlines']
+    snippets=article_data['snippets']
+    return {
+        'topic': topic,
+        'headlines': headlines, # headlines is an array of strings, see how we got this array in our other route!
+        'snippets': snippets,
+    }
 
 app.run(
     host=os.getenv('IP', '0.0.0.0'),
