@@ -17,7 +17,7 @@ def hello_world():
         topic=keyword_query,
         headlines=article_data['headlines'],
         snippets=article_data['snippets'],
-        dates=article_data['dates']
+        dates=article_data['dates'],
     )
 @app.route('/search/<user_text>')
 def user_text(user_text):
