@@ -11,7 +11,7 @@ window.onload = () => { // onload makes sure the content is loaded on page first
                 var i;
                 for (i = 0; i < data["headlines"].length; i++) {
                     var tag = document.createElement("p");
-                    var text = document.createTextNode(data["headlines"][i]);
+                    var text = document.createTextNode(data["headlines"][i] + data["dates"][i]);
                     tag.appendChild(text);
                     var element = document.getElementById("new");
                     element.appendChild(tag);

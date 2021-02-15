@@ -28,10 +28,12 @@ def user_text(user_text):
     headlines=article_data['headlines']
     snippets=article_data['snippets']
     dates=article_data['dates']
+    urls=article_data['urls']
     return {
         'headlines': headlines, # headlines is an array of strings, see how we got this array in our other route!
         'snippets': snippets,
         'dates': dates,
+        'urls': urls,
     }
 
 app.run(
