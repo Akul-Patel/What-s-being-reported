@@ -1,5 +1,4 @@
 import os
-
 import requests
 from dotenv import load_dotenv, find_dotenv
 
@@ -24,11 +23,16 @@ def get_article_data(keyword):
 
     def get_snippet(article):
         return article['snippet']
+    
+    def get_date(article):
+        return article['pub_date']
 
     headlines = map(get_headline, articles)
     snippets = map(get_snippet, articles)
-
+    dates = map(get_date, articles)
+    
     return {
         'headlines': list(headlines),
         'snippets': list(snippets),
+        'dates': list(dates),
     }

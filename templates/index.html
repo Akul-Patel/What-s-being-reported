@@ -13,7 +13,7 @@
     <div class='container' id="new">
         {% for i in range(10) %}
         <div class='item' id='new2'>
-            <p><b>{{ headlines[i] }}</b></p>
+            <p><b>{{ headlines[i] }}<b> ({{ dates[i] }}) </p>
             <p>{{ snippets[i] }}</p>
         </div>
         {% endfor %}
