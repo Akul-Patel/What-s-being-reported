@@ -9,7 +9,7 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 def hello_world():
     """ Returns root endpoint HTML """
 
-    keyword_query = 'Robinhood' # Change it to something you're interested in!
+    keyword_query = 'Stocks' # Change it to something you're interested in!
     article_data = get_article_data(keyword_query)
 
     return render_template(

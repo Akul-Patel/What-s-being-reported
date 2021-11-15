@@ -7,13 +7,16 @@
 </head>
 
 <body>
-    <button id="myCoolButton">Search here!</button>  
     <input id="name" type="text" name="name" >
-    <h1>What's being reported about {{ topic }}?</h1>
+    <button id="myCoolButton">Search here!</button>  
+    <h1 id="title">What's being reported about {{ topic }}?</h1>
     <div class='container' id="new">
         {% for i in range(10) %}
         <div class='item'>
-            <p><a href={{ urls[i] }}><b>{{ headlines[i] }}</b></a> ({{ dates[i] }})</p>
+                <!-- <p><a href={{ urls[i] }}><b>{{ headlines[i] }}</b></a> </p> -->
+                <p><a href={{ urls[i] }}><b>{{ headlines[i] }} </b></a></p>
+                <p>({{ dates[i] }})</p>
+            
             <p>{{ snippets[i] }}</p>
         </div>
         {% endfor %}
